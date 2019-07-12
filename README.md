@@ -13,6 +13,27 @@ Input: heights of trees below:
 Output:
 `169.375`
 
+```
+//the first question of the sets lab is asking us to convert the data into a set, (so as to remove the duplicates) then find the average.
+// the input is all ints, but the code must be able to return doubles.
+
+var plantHeights: Set<Double> = [161, 182, 161, 154, 176, 170, 167, 171, 170, 174]
+
+//average means sum all the heights then divide by number of plants. The set is going to remove dulpicates. the request is for the average of all distinct heights. so the code can use the number of distinct heights.
+
+var findingThePlantSum = 0.0
+
+//i want the code below to loop through the set and append my new variable adding up the sum.
+for distinctPlantHeight in plantHeights{
+findingThePlantSum += distinctPlantHeight
+}
+// the new var finds the average by dividing by the set count
+
+var distinctPlantHeight = findingThePlantSum / Double (plantHeights.count)
+print(distinctPlantHeight)
+
+```
+
 
 ## Question 2
 
@@ -20,6 +41,26 @@ Determine if a String is a pangram. A pangram is a string that contains every le
 
  e.g `"The quick brown fox jumps over the lazy dog"` is a pangram
  e.g `"The quick brown fox jumped over the lazy dog"` is NOT a pangram
+ 
+ ```
+ var pangramToBeTested1 = "The quick brown fox jumped over the lazy dog"
+ var pangramCharacters = ""
+ 
+ var pangramToBeTested = pangramToBeTested1.lowercased()
+ 
+ for char in pangramToBeTested{
+ pangramCharacters.append(char)
+ }
+ 
+ var setForPangram = Set(pangramCharacters)
+ 
+ if setForPangram.count == 27{
+ print("\(pangramToBeTested) is a pangram")
+ }
+ else{
+ print("\(pangramToBeTested) is not a pangram")
+ }
+ ```
 
 
 ## Question 3
